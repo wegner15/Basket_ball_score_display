@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>* {box-sizing: border-box;}
+.column {float: left;width: 50%;padding: 10px;height: 50rem; }
+
+
+
+
+</style></head><body>
+
+<h2 style="color: #33cc33;">KSBC LEAGUE</h2>
+
+<div class="row" style="width: 100%;">
+  <div class="column" style="background-color:rgb(243, 239, 239); height: 100%; float: right;">
+    <header class="teamName">AWAY</header>
+        <div><a href="/home-2"><button id="buttonm2" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-2</button></a><!----><a href="/homeplus2"><button id="buttona2" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+2</button></a></div>
+        <div><a href="/home-3"><button id="buttonm3" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-3</button></a><!----><a href="/homeplus3"><button id="buttona3" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+3</button></a></div>
+        <div><a href="/home-1"><button id="buttonm1" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-1</button></a><!----><a href="/homeplus1"><button id="buttona1" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+1</button></a></div>
+        <div><a href="/home-faul"><button id="buttonm1faul" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">Time Out</button></a><!----><a href="/homeplusfaul"><button id="buttona1faul" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">Foul</button></a></div>
+  </div>
+  
+  <div class="column" style="background-color:rgb(233, 234, 240); height: 100%; width: 50%; float: left;">
+      <header class="teamName" style="color:black;">HOME</header>
+      <div><a href="/away-2"><button id="buttonm2"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-2</button></a><!--
+--><a href="/awayplus2"><button id="buttona2"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+2</button></a>
+    </div>
+      <div><a href="/away-3"><button id="buttonm3"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-3</button></a><!--
+      --><a href="/awayplus3"><button id="buttona3"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+3</button></a></div>
+      <div><a href="/awayplus1"><button id="buttonm1"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-1</button></a><!--
+      --><a href="/away-1"><button id="buttona1"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+1</button></a></div>
+      <div><a href="/away-1faul"><button id="buttonm1faul"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">Foul</button></a><!--
+      --><a href="/awayplusfaul"><button id="buttona1faul"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">Time Out</button></a></div>      
+    </div></div>
+  
+    <div style="width:100%;height:25%;border:1px solid rgb(47, 15, 224);">
+      <div class="period" >PERIODS<div>
+        <a href="/period-1"><button id="buttonm2"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">-1 Period</button></a><!----><a href="/periodplus1"><button id="buttona2"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">+1Period</button></a>
+      </div></div><div class="mode">MODE<div>
+        <a href="/realTime"><button id="buttonm2" style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">Real Time</button></a><!----><a href="/countDown"><button id="buttona2"style="background-color: blue;width: 45%;height: 40px; color: azure;border-radius: 5px 5px;">Count Down</button></a>
+      </div></div>
+    </div>
+      
+    
+    <div style="width:100%; height:20rem; padding-top: 1.5%; padding-left: 2.5%; "><div style="align-self: center; height: 30%;padding: 2%;">
+        <a href="/start"><button id="startStopButton" style="height: 100%; font-size: larger; border-radius: 50%; width: 45%; background-color: blue; color: aliceblue;">START/STOP</button></a>
+        <a href="/reset"><button id="resetButton" style="height: 100%; float: right; font-size: larger; border-radius: 50%;  width: 45%; background-color: blue; color: aliceblue;">RESET</button></a></div>
+        <div style=" height: 20%; padding: 1.5%;"><a href="/left"><button  style="float: left; border-radius: 20%; width: 33.33%;height: 100%; background-color:blue; font-size: larger; color: wheat;"><</button></a>
+          <a href="/change24-14"><button style="width: 33.33%; border-radius: 20%; height: 100%;font-size: larger;background-color: blue; color: wheat;">24/14</button></a>
+          <a href="/right"><button style="float: right;border-radius: 20%; background-color:blue; width: 33.33%;height: 100%; font-size: larger; color: wheat;">></button></a></div>
+        
+          <form action="/get" class="box" id="my-form">
+            <header>SET TIMER</header> 
+            <input name="minutes" type="text" placeholder="Minutes"style="float: left; width: 33.33%;">
+            <input name="seconds" type="text" placeholder="Seconds" style="width: 33.33%;">
+              <input type='hidden' placeholder="countUp" value='0' name='countUp'> 
+            <input type="submit" value="submit" style="float: right; width: 33.33%;">
+            </form>
+    
+      </div>
+      <p style="color:chartreuse;">&#169 Novatech Engineerics 2021
+       <br> Phone: 0790668724
+      </p>
+    </body></html>
