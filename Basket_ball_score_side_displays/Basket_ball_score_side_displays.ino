@@ -37,10 +37,7 @@ void loop() {
   }
 
 }
-
-
 void UpdateDisplay() {
-
   digitalWrite(latchPin, LOW);  // prepare shift register for data
 
   for (int i = numberOfRegisters - 1; i >= 0; i--) {
