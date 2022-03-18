@@ -30,26 +30,26 @@ void loop() {
     data[1] = content.substring(3, 4).toInt();
     data[2] = content.substring(5, 6).toInt();
     data[3] = content.substring(7, 8).toInt();
-    data[4] = content.substring(9, 10).toInt();
-    data[5] = content.substring(11, 12).toInt();
+    data[4] = content.substring(11, 12).toInt();
+    data[5] = content.substring(9, 10).toInt();
+    Serial.println(data[0]);
+    Serial.println(data[1]);
+    Serial.println(data[2]);
+    Serial.println(data[3]);
+    Serial.println(data[4]);
+    Serial.println(data[5]);
     UpdateDisplay();
-    delay(10);
   }
+  
+//    delay(30);
 
 }
 void UpdateDisplay() {
   digitalWrite(latchPin, LOW);  // prepare shift register for data
 
   for (int i = numberOfRegisters - 1; i >= 0; i--) {
-    if (i == 4) {
-      shiftOut(dataPin, clockPin, MSBFIRST, myfnNumToBits(data[5]));
-    }
-    else if (i == 5) {
-      shiftOut(dataPin, clockPin, MSBFIRST, myfnNumToBits(data[4]));
-    }
-    else {
-      shiftOut(dataPin, clockPin, MSBFIRST, myfnNumToBits(data[i]));
-    }
+
+    shiftOut(dataPin, clockPin, MSBFIRST, myfnNumToBits(data[i]));
   }
   digitalWrite(latchPin, HIGH); // update display
   
